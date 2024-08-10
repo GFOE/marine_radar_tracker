@@ -184,6 +184,7 @@ private:
     if(last_target_scan_time_.is_zero())
       last_target_scan_time_ = last_time_;
 
+    /*
     if((last_time_ - last_target_scan_time_).toSec() > 1.0)
     {
       if(!scan_done_.valid() || scan_done_.wait_for(std::chrono::milliseconds(10)) == std::future_status::ready)
@@ -195,6 +196,7 @@ private:
       else
         ROS_WARN_STREAM("Not ready to scan");
     }
+    */
   }
 
   bool scanForTargets(grid_map::GridMap grid_map)
